@@ -476,6 +476,8 @@ int OPENSSL_INIT_set_config_appname(OPENSSL_INIT_SETTINGS *settings,
 
 void OPENSSL_INIT_free(OPENSSL_INIT_SETTINGS *settings)
 {
+    if (settings == NULL)
+        return;
     free(settings->filename);
     free(settings->appname);
     free(settings);

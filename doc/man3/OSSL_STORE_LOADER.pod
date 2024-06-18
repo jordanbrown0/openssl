@@ -126,6 +126,7 @@ I<loader>.
 
 OSSL_STORE_LOADER_free() decrements the reference count for the given
 I<loader>, and when the count reaches zero, frees it.
+If I<loader> is NULL, nothing is done.
 
 OSSL_STORE_LOADER_get0_provider() returns the provider of the given
 I<loader>.
@@ -297,6 +298,7 @@ OSSL_STORE_LOADER_set_close() sets the closing function for the
 I<store_loader>.
 
 OSSL_STORE_LOADER_free() frees the given I<store_loader>.
+If I<store_loader> is NULL, nothing is done.
 
 OSSL_STORE_register_loader() register the given I<store_loader> and
 thereby makes it available for use with OSSL_STORE_open(),

@@ -21,7 +21,7 @@ OSSL_STACK_OF_X509_free
 
 =head1 DESCRIPTION
 
-The X509 ASN1 allocation routines, allocate and free an
+The X509 ASN1 allocation routines allocate and free an
 X509 structure, which represents an X509 certificate.
 
 X509_new_ex() allocates and initializes a X509 structure with a
@@ -45,6 +45,7 @@ chain B<x> and returns a copy of the stack, or an empty stack if B<a> is NULL.
 
 OSSL_STACK_OF_X509_free() deallocates the given list of pointers to
 certificates after calling X509_free() on all its elements.
+If I<certs> is NULL, nothing is done.
 
 =head1 NOTES
 

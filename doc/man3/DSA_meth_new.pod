@@ -111,6 +111,7 @@ existing one, but with some differences.
 
 DSA_meth_free() destroys a B<DSA_METHOD> structure and frees up any memory
 associated with it.
+If I<dsam> is NULL, nothing is done.
 
 DSA_meth_get0_name() will return a pointer to the name of this DSA_METHOD. This
 is a pointer to the internal name string and so should not be freed by the

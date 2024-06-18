@@ -42,6 +42,7 @@ EVP_KEYEXCH_free() decrements the reference count for the B<EVP_KEYEXCH>
 structure. Typically this structure will have been obtained from an earlier call
 to EVP_KEYEXCH_fetch(). If the reference count drops to 0 then the
 structure is freed.
+If I<exchange> is NULL, nothing is done.
 
 EVP_KEYEXCH_up_ref() increments the reference count for an B<EVP_KEYEXCH>
 structure.

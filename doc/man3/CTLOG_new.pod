@@ -51,6 +51,7 @@ Regardless of whether CTLOG_new() or CTLOG_new_from_base64() is used, it is the
 caller's responsibility to pass the CTLOG to CTLOG_free() once it is no longer
 needed. This will delete it and, if created by CTLOG_new(), the EVP_PKEY that
 was passed to it.
+If I<log> is NULL, nothing is done.
 
 CTLOG_get0_name() returns the name of the log, as provided when the CTLOG was
 created. Ownership of the string remains with the CTLOG.

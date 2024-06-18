@@ -228,6 +228,7 @@ ENGINE_get_next(), ENGINE_get_prev(). All structural references should be
 released by a corresponding to call to the ENGINE_free() function - the
 ENGINE object itself will only actually be cleaned up and deallocated when
 the last structural reference is released.
+If ENGINE_free() is called with a NULL argument, nothing is done.
 
 It should also be noted that many ENGINE API function calls that accept a
 structural reference will internally obtain another reference - typically

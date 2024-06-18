@@ -106,6 +106,7 @@ Each setter has a matching getter for accessing the current value.
 
 When no longer required, the B<CT_POLICY_EVAL_CTX> should be passed to
 CT_POLICY_EVAL_CTX_free() to delete it.
+If I<ctx> is NULL, nothing is done.
 
 =head1 NOTES
 
